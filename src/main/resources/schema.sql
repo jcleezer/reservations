@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS  RESERVATION (id SERIAL PRIMARY KEY, first_name VARCHAR(255), last_name VARCHAR(255), email_address VARCHAR(255), arrival_date date, departure_date date)
