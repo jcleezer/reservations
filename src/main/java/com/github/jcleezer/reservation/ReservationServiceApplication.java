@@ -7,9 +7,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
 @EnableSwagger2
-@ComponentScan(basePackageClasses = {
-		ReservationRestController.class
-})
+@ComponentScan()
 public class ReservationServiceApplication {
 
 	public static void main(String[] args) {

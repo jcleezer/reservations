@@ -1,4 +1,4 @@
-package com.github.jcleezer.reservation;
+package com.github.jcleezer.reservation.controller;
 
 import com.github.jcleezer.reservation.model.Reservation;
 import com.github.jcleezer.reservation.service.ReservationService;

@@ -25,12 +25,5 @@ public class ConcurrencyTests extends TestBase {
                         .map( res -> given().contentType(ContentType.JSON).body(res).when().post("reservation").then().log().all().extract().statusCode())
                                 .map( status -> status == 200 ? 1 : 0).reduce(0, Integer::sum);
         assertEquals(numSuccessBookings,1,"Only one concurrent booking should be successful");
-
-        /*
-        StepVerifier.create(Flux.fromStream(IntStream.range(0,numUsers).boxed()).map(i -> new Reservation(null, "Foo","Bar"+i,"tester@foo.com",arrivalDate,arrivalDate.plusDays(3)))
-                        .map( res -> given().contentType(ContentType.JSON).body(res).when().post("reservation").then().extract().statusCode())
-                .reduce(0, (left,right) ->  right==200 ? left+1: left )).expectNext(1).expectComplete().verify(Duration.ofMillis(500));
-         */
-
     }
 }
